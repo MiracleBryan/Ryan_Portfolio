@@ -1,0 +1,33 @@
+.navContainer{
+    
+
+}
+
+.navTagContainer{
+    display: flex;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.navContainer.divider{
+    background-color: white;
+    width: 100%;
+    height: 3px;
+}
+
+.navTag{
+    margin-left: 2vw;
+    font-size: 2vw;
+    font-weight: bold;
+    color:white;
+    font-family: Arial, sans-serif;
+}
+
+.navTag:hover{
+    color:aquamarine;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}

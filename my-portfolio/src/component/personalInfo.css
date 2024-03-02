@@ -1,0 +1,38 @@
+.avator{
+    width: 100%;
+    height: auto; 
+    
+}
+
+
+.avatorContainer{
+    width: 15vw;
+    height: 16vw;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+
+
+.largeFont.name{
+    margin-top: 1vh;
+    cursor: default;
+}
+
+.avatorTop{
+    margin-top: 4vh;
+    margin-left: 4vh;
+    width: 15vw;
+}
+
+
+
+
+/* Font size */
+.largeFont{
+    font-size: 2vw;
+    font-weight: bold;
+    color:white;
+    font-family: Arial, sans-serif;
+}
