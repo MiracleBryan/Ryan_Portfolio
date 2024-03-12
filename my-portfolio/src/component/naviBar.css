@@ -1,5 +1,5 @@
 .navContainer{
-    
+    /* height: 3vw; */
 
 }
 
@@ -24,7 +24,10 @@
 }
 
 .navTag:hover{
-    color:aquamarine;
+    background-image: linear-gradient(to right, #8ac9ed, #d584ce);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     cursor: pointer;
 }
 

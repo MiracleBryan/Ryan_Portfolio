@@ -1,10 +1,10 @@
-import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap"
 import { useState, useEffect } from "react";
+import { Outlet, Link } from "react-router-dom";
 import './naviBar.css';
 
 const NavigationBar = () => {
-    const [activeLink, setActiveLink] = useState('home');
-    const [scrolled, setScrolled] = useState(false);
+    const [activeLink, setActiveLink] = useState<string>('home');
+    const [scrolled, setScrolled] = useState<boolean>(false);
     useEffect(() => {
         const onScroll = () => {
             if (window.scrollY > 50) {
@@ -28,9 +28,16 @@ const NavigationBar = () => {
     return (
         <div className="navContainer">
             <div className="navTagContainer">
-                <a href="#home" className="navTag">Home</a>
-                <a href="#skills" className="navTag">Skills </a>
-                <a href="#projects" className="navTag">Projects</a>
+
+                <Link to="/home" className="navTag">Home</Link>
+
+                <Link to="/me" className="navTag">About Me </Link>
+
+                <Link to="/skills" className="navTag">Skills </Link>
+
+                <Link to="/projects" className="navTag">Projects</Link>
+
+                
             </div>
             <div className="navContainer divider"></div>
         </div>

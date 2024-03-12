@@ -1,0 +1,51 @@
+
+
+
+.title{
+    background: linear-gradient(to right, #8ac9ed, #d584ce);
+    display: inline;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.firstLine{
+    display: flex;
+    justify-content: center;
+    padding-top: 4vh;
+}
+
+/* Font size */
+.largeFont{
+    margin-top: 8px;
+    font-size: 3vw;
+    text-align: left;
+    font-weight: bold;
+    color:white;
+    font-family: Arial, sans-serif;
+}
+
+.midFont{
+    margin-top: 8px;
+    font-size:2.2vw;
+    font-weight: bold;
+    /* color: white; */
+    font-family: Arial, sans-serif;
+}
+
+.smallFont{
+    margin-top: 4px;
+    font-size: 1vw;
+    text-align: left;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.defCursor{
+    cursor: default;
+}
+
+.centerFont{
+    text-align: center;
+}

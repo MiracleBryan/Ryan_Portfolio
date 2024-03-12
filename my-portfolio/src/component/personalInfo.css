@@ -6,9 +6,9 @@
 
 
 .avatorContainer{
-    width: 15vw;
-    height: 16vw;
-    border-radius: 50%;
+    width: 24vw;
+    height: 32vw;
+    border-radius: 5%;
     overflow: hidden;
 }
 
@@ -20,10 +20,55 @@
     cursor: default;
 }
 
+
+.midFont.grad {
+    background-image: linear-gradient(to right, #8ac9ed, #d584ce);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+
+
 .avatorTop{
-    margin-top: 4vh;
-    margin-left: 4vh;
-    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+
+}
+
+.leftPart{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10vw;
+    padding-top: 10vh;
+    width: 50vw;
+}
+
+.firstLine{
+    display:flex;
+    padding-top: 5vw;
+    /* height: 92vw; */
+
+}
+
+.linkContainer{
+    display: flex;
+    align-items: center;
+    
+}
+
+.smallFont.linkedin{
+    margin: 0;
+    cursor: pointer;
+    padding:4px 17px;
+    border: 3px solid ;
+    border-radius: 5px;
+    border-image: linear-gradient(to right, #8ac9ed, #d584ce); 
+    border-image-slice: 1;
 }
 
 
@@ -31,8 +76,30 @@
 
 /* Font size */
 .largeFont{
-    font-size: 2vw;
+    margin-top: 8px;
+    font-size: 3vw;
+    text-align: left;
     font-weight: bold;
     color:white;
     font-family: Arial, sans-serif;
+}
+
+.midFont{
+    margin-top: 8px;
+    font-size:2.2vw;
+    font-weight: bold;
+    /* color: white; */
+    font-family: Arial, sans-serif;
+}
+
+.smallFont{
+    margin-top: 4px;
+    font-size: 1vw;
+    text-align: left;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.defCursor{
+    cursor: default;
 }
