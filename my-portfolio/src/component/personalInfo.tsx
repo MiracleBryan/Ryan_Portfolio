@@ -6,7 +6,7 @@ const PersonalInfo = () => {
 
 
     return (
-        <div >
+        <div className='container'>
             <div className='firstLine'>
                 
                 <div className='leftPart'>

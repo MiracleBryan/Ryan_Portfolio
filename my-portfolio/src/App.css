@@ -7,7 +7,9 @@
   background-color:rgba(0, 0, 0);
 }
 
-
+.container{
+  height: 100%;
+}
 
 .App-header {
 
@@ -27,20 +29,22 @@
 /* Page Animation */
 .fade-enter {
   opacity: 0;
+  z-index: 1;
+  
 }
 
-.fade-enter-active {
+.fade-enter.fade-enter-active {
   opacity: 1;
   animation: fadeIn 0.5s ease-in-out forwards;
+  
 }
 
 .fade-exit {
-  opacity: 1;
+  display: none
 }
 
 .fade-exit-active {
   opacity: 0;
-  
 }
 
 
