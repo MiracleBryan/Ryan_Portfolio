@@ -23,7 +23,8 @@
     font-family: Arial, sans-serif;
 }
 
-.navTag:hover{
+
+.navTag:hover, .navTag.actived{
     background-image: linear-gradient(to right, #8ac9ed, #d584ce);
     -webkit-background-clip: text;
     background-clip: text;

@@ -5,7 +5,6 @@
     
 }
 
-
 .avatorContainer{
     width: 24vw;
     height: 32vw;
@@ -13,14 +12,10 @@
     overflow: hidden;
 }
 
-
-
-
 .largeFont.name{
     margin-top: 1vh;
     cursor: default;
 }
-
 
 .midFont.grad {
     background-image: linear-gradient(to right, #8ac9ed, #d584ce);
@@ -29,31 +24,30 @@
     color: transparent;
 }
 
-
-
-
 .avatorTop{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50vw;
+    width: 45vw;
 
 }
 
 .leftPart{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
     padding-left: 10vw;
-    padding-top: 10vh;
-    width: 50vw;
+    width: 45vw;
 }
 
 .firstLine{
     display:flex;
-    padding-top: 5vw;
-    /* height: 92vw; */
+    padding-top: 0;
+}
 
+.subDis{
+    padding-top: 6vh;
 }
 
 .linkContainer{
@@ -89,7 +83,7 @@
     margin-top: 8px;
     font-size:2.2vw;
     font-weight: bold;
-    /* color: white; */
+    color: white;
     font-family: Arial, sans-serif;
 }
 

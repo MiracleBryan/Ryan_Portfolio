@@ -3,8 +3,8 @@ import { Outlet, Link } from "react-router-dom";
 import './naviBar.css';
 
 const NavigationBar = () => {
-    const [activeLink, setActiveLink] = useState<string>('home');
     const [scrolled, setScrolled] = useState<boolean>(false);
+    const [activedBtn, setActiveBtn] = useState<string>('');
     useEffect(() => {
         const onScroll = () => {
             if (window.scrollY > 50) {
@@ -19,8 +19,8 @@ const NavigationBar = () => {
         return () => window.removeEventListener("scroll", onScroll);
     }, [])
 
-    const onUpdateActiveLink = (value:string) => {
-        setActiveLink(value);
+    const handleNaviClick = (tag: string):void =>{
+        setActiveBtn(tag)
     }
 
 
@@ -29,13 +29,13 @@ const NavigationBar = () => {
         <div className="navContainer">
             <div className="navTagContainer">
 
-                <Link to="/home" className="navTag">Home</Link>
+                <Link to="/home" className={`navTag ${activedBtn == 'Home' ? 'actived' : ''}`} onClick={()=>{handleNaviClick('Home')}}>Home</Link>
 
-                <Link to="/me" className="navTag">About Me </Link>
+                <Link to="/me" className={`navTag ${activedBtn == 'Me' ? 'actived' : ''}`} onClick={()=>{handleNaviClick('Me')}}>About Me </Link>
 
-                <Link to="/skills" className="navTag">Skills </Link>
+                <Link to="/skills" className={`navTag ${activedBtn == 'Skills' ? 'actived' : ''}`} onClick={()=>{handleNaviClick('Skills')}}>Skills </Link>
 
-                <Link to="/projects" className="navTag">Projects</Link>
+                <Link to="/projects" className={`navTag ${activedBtn == 'Projects' ? 'actived' : ''}`} onClick={()=>{handleNaviClick('Projects')}}>Projects</Link>
 
                 
             </div>
