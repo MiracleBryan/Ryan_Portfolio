@@ -6,15 +6,14 @@ import flutterIcon from '../assets/flutter-Icon.jpg';
 import reactIcon from '../assets/react-Icon.jpg';
 import reduxIcon from '../assets/redux-Icon.jpg';
 import csharpIcon from '../assets/csharp-Icon.jpg';
+import Title from "./component";
 
 
 const Skills = () => {
     return (
         <div className="skillContainer">
             <div className="firstLine">
-                <p className="title largeFont defCursor alignFont ">
-                    ----- Skills -----
-                </p>
+                {Title('Skills')}
             </div>
             <div className="secondLine">
                 <div className="leftContainer">

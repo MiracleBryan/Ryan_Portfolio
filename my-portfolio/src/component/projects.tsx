@@ -1,12 +1,11 @@
+import Title from "./component"
 import "./projects.css"
 
 const Projects = ()=>{
     return (
     <div className="projectContainer">
         <div className="firstLine">
-            <p className="title largeFont defCursor alignFont ">
-                ----- Projects -----
-            </p>
+            {Title('Projects')}
         </div>
         <div className="slideContainer">
             <div className="project1 midFont">

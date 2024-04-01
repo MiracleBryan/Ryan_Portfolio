@@ -5,6 +5,7 @@ import NavigationBar from './component/naviBar';
 import PersonalInfo from './component/personalInfo';
 import Skills from './component/skills';
 import Projects from './component/projects';
+import AboutMe from './component/me';
 
 function App() {
   return (
@@ -24,13 +25,14 @@ const AnimatedComponent = () => {
     <TransitionGroup>
       <CSSTransition
         key={location.pathname}
-        timeout={{ enter: 400, exit: 0 }}
+        timeout={{ enter: 500, exit: 100000 }}
         classNames="fade"
       >
         {/* Define each route path*/}
         <Routes location={location}>
           <Route path="" element={<PersonalInfo />} />
           <Route path="/home" element={<PersonalInfo />} />
+          <Route path="/me" element={<AboutMe />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>

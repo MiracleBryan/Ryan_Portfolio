@@ -4,7 +4,7 @@ import './naviBar.css';
 
 const NavigationBar = () => {
     const [scrolled, setScrolled] = useState<boolean>(false);
-    const [activedBtn, setActiveBtn] = useState<string>('');
+    const [activedBtn, setActiveBtn] = useState<string>('Home');
     useEffect(() => {
         const onScroll = () => {
             if (window.scrollY > 50) {
@@ -19,8 +19,9 @@ const NavigationBar = () => {
         return () => window.removeEventListener("scroll", onScroll);
     }, [])
 
-    const handleNaviClick = (tag: string):void =>{
+    const handleNaviClick = (tag: string):void => {
         setActiveBtn(tag)
+        setTimeout(()=>{},500)
     }
 
 
@@ -29,7 +30,7 @@ const NavigationBar = () => {
         <div className="navContainer">
             <div className="navTagContainer">
 
-                <Link to="/home" className={`navTag ${activedBtn == 'Home' ? 'actived' : ''}`} onClick={()=>{handleNaviClick('Home')}}>Home</Link>
+                <Link to="/home" className={`navTag ${activedBtn == 'Home' ? 'actived' : ''}`} onClick={()=>{ handleNaviClick('Home')}}>Home</Link>
 
                 <Link to="/me" className={`navTag ${activedBtn == 'Me' ? 'actived' : ''}`} onClick={()=>{handleNaviClick('Me')}}>About Me </Link>
 

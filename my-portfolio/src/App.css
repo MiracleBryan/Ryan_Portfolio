@@ -35,6 +35,7 @@
 }
 
 .fade-exit-active {
+  display: none;
   opacity: 0;
 }
 
