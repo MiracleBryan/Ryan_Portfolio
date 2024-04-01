@@ -1,6 +1,4 @@
 .projectContainer{
-    display: flex;
-    flex-direction: column;
     padding:  0 5vw;
     width: 90vw;
 }

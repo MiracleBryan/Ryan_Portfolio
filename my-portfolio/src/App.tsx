@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.css';
@@ -21,12 +22,15 @@ function App() {
 // Add routing animation
 const AnimatedComponent = () => {
   let location = useLocation();
+  //const [isTransitioning, setIsTransitioning] = useState(false);
   return <div className='container'>
     <TransitionGroup>
       <CSSTransition
         key={location.pathname}
-        timeout={{ enter: 500, exit: 100000 }}
+        timeout={{ enter: 500, exit: 500 }}
         classNames="fade"
+        // onExit={() => setIsTransitioning(true)}
+        // onExited={() => setIsTransitioning(false)}
       >
         {/* Define each route path*/}
         <Routes location={location}>
