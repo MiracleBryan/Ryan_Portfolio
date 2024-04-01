@@ -4,6 +4,7 @@ import './App.css';
 import NavigationBar from './component/naviBar';
 import PersonalInfo from './component/personalInfo';
 import Skills from './component/skills';
+import Projects from './component/projects';
 
 function App() {
   return (
@@ -31,8 +32,7 @@ const AnimatedComponent = () => {
           <Route path="" element={<PersonalInfo />} />
           <Route path="/home" element={<PersonalInfo />} />
           <Route path="/skills" element={<Skills />} />
-          <Route path="/me" element={<Skills />} />
-          <Route path="/projects" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>
