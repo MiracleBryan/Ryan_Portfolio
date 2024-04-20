@@ -35,6 +35,7 @@ const AnimatedComponent = () => {
         {/* Define each route path*/}
         <Routes location={location}>
           <Route path="" element={<PersonalInfo />} />
+          <Route path="/Ryan_Portfolio/" element={<PersonalInfo />} />
           <Route path="/home" element={<PersonalInfo />} />
           <Route path="/me" element={<AboutMe />} />
           <Route path="/skills" element={<Skills />} />
