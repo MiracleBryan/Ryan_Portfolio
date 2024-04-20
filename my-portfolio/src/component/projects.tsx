@@ -1,4 +1,4 @@
-import "./projects.css"
+import "./projects.scss"
 import htmlIcon from '../assets/html-Icon.jpg';
 import cssIcon from '../assets/css-Icon.jpg';
 import jsIcon from '../assets/js-Icon.jpg';

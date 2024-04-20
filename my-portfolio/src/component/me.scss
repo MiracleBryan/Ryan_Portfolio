@@ -1,0 +1,93 @@
+.aboutmeContainer{
+    padding:  0 5vw;
+    width: 90vw;
+    height: 100%;
+}
+
+.firstLine-aboutMe{
+    display: flex;
+    justify-content: center;
+}
+
+//star light
+@function getShadow($num){
+    $shadows:'#{random(100)}vw #{random(100)}vh #fff';
+    @for $i from 2 through $num{
+        $shadows:'#{$shadows}, #{random(100)}vw #{random(100)}vh #fff'
+    }
+    @return unquote($shadows);
+}
+
+$duration: 1000s;
+$count: 500;
+@for $i from 1 through 5{
+    $duration: calc($duration / 2);
+    $count: floor(calc($count / 2));
+    .layer#{$i}{
+        $size: #{$i}px;
+        position: fixed;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        box-shadow: getShadow($count);
+        animation: moveUp $duration linear infinite;
+        &::after{
+            content: '';
+            position: fixed;
+            width: inherit;
+            height: inherit;
+            left: 0;
+            top:100vh;
+            border-radius: inherit;
+            box-shadow: inherit;
+        }
+    }
+}
+
+
+@keyframes moveUp{
+    to{
+        transform: translateY(-100vh);
+    }
+}
+
+/* Font size */
+.largeFont{
+    margin-top: 8px;
+    font-size: 3vw;
+    text-align: left;
+    font-weight: bold;
+    color:white;
+    font-family: Arial, sans-serif;
+}
+
+.midFont{
+    margin-top: 8px;
+    font-size:2.2vw;
+    font-weight: bold;
+    /* color: white; */
+    font-family: Arial, sans-serif;
+}
+
+.smallFont{
+    margin-top: 4px;
+    font-size: 1vw;
+    text-align: left;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.defCursor{
+    cursor: default;
+}
+
+.alignFont{
+    text-align: center;
+}
+
+.nmg{
+    margin: 0;
+    padding: 0;
+}

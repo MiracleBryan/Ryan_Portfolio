@@ -1,18 +1,28 @@
 import Title from "./component"
-import "./me.css"
+import "./me.scss"
 
-const AboutMe = ()=>{
+const AboutMe = () => {
     return (
-    <div className="aboutmeContainer">
-        <div className="firstLine-aboutMe">
-            {Title('About Me')}
-        </div>
         <div>
-            11111
+            <div className="aboutmeContainer">
+
+                <div className="firstLine-aboutMe">
+                    {Title('About Me')}
+                </div>
+                <div>
+                    11111
+                </div>
+            </div>
+            <div className='layer1'></div>
+            <div className='layer2'></div>
+            <div className='layer3'></div>
+            <div className='layer4'></div>
+            <div className='layer5'></div >
         </div>
-    </div>
+
+
     )
-    
+
 }
 
 

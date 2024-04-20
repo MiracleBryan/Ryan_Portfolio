@@ -1,4 +1,4 @@
-import "./component.css"
+import "./component.scss"
 
 const Title = (titleName: string)=>{
     return (

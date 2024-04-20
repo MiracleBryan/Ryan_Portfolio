@@ -1,5 +1,5 @@
 import avator from '../assets/avator.jpg';
-import './personalInfo.css'
+import './personalInfo.scss'
 
 
 const PersonalInfo = () => {
@@ -7,8 +7,8 @@ const PersonalInfo = () => {
 
     return (
         <div className='container'>
+            
             <div className='firstLine'>
-
                 <div className='leftPart'>
                     <p className='midFont defCursor grad'>Hello, I'm Ryan Wang</p>
                     <p className='midFont defCursor'>Full-Stack Developer | Software Engineer</p>
