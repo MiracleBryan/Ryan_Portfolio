@@ -10,6 +10,11 @@ import Title from "./component";
 
 
 const Projects = () => {
+
+    const handleClickDetail = () => {
+
+    }
+
     return (
         <div className="projectContainer">
             <div className="firstLine">
@@ -17,13 +22,22 @@ const Projects = () => {
             </div>
             <div className="slideContainer">
                 <div className="project1 midFont">
-                    Project 1
+                    MTH <br/>(Media Transfer Hub)
+                    <div className="midFont">
+                        1111111
+                    </div>
+                    <div className="smallFont" onClick={()=>{handleClickDetail()}}>
+                        click this
+                    </div>
                 </div>
                 <div className="project2 midFont">
-                    Project 2
+                    Recam
                 </div>
                 <div className="project3 midFont">
-                    Project 3
+                    Bado
+                </div>
+                <div className="project4 midFont">
+                    Backend Service System
                 </div>
             </div>
         </div>
