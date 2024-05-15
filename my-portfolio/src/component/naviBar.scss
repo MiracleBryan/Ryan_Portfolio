@@ -5,6 +5,7 @@
 
 .navTagContainer{
     display: flex;
+    justify-content: space-between;
     padding-top: 2vh;
     padding-bottom: 2vh;
 }
@@ -34,4 +35,17 @@
 
 a{
     text-decoration: none;
+}
+
+.downloadFont{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #8ac9ed, #d584ce);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
 }

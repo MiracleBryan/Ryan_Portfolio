@@ -21,23 +21,30 @@ const Projects = () => {
                 {Title('Project')}
             </div>
             <div className="slideContainer">
-                <div className="project1 midFont">
-                    MTH <br/>(Media Transfer Hub)
-                    <div className="midFont">
-                        1111111
-                    </div>
-                    <div className="smallFont" onClick={()=>{handleClickDetail()}}>
-                        click this
-                    </div>
+                <div className="project1" >
+                    <p className="projectName midFont btnCursor" onClick={()=>{handleClickDetail()}}>
+                        MTH <br/>(Media Transfer Hub)
+                    </p>
+                    <p>
+                        
+                    </p>
+                    
                 </div>
-                <div className="project2 midFont">
-                    Recam
+                <div className="project2">
+                    <p className="projectName midFont btnCursor" onClick={()=>{handleClickDetail()}}>
+                        Recam
+                    </p>
                 </div>
-                <div className="project3 midFont">
-                    Bado
+                <div className="project3">
+                    <p className="projectName midFont btnCursor" onClick={()=>{handleClickDetail()}}>
+                        Bado
+                    </p>
                 </div>
-                <div className="project4 midFont">
-                    Backend Service System
+                <div className="project4">
+                    <p className="projectName midFont btnCursor" onClick={()=>{handleClickDetail()}}>
+                        Backend Service System
+                    </p>
+                    
                 </div>
             </div>
         </div>

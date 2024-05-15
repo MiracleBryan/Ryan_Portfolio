@@ -36,10 +36,10 @@ const AnimatedComponent = () => {
         <Routes location={location}>
           <Route path="" element={<PersonalInfo />} />
           <Route path="/Ryan_Portfolio/" element={<PersonalInfo />} />
-          <Route path="/home" element={<PersonalInfo />} />
-          <Route path="/me" element={<AboutMe />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/Ryan_Portfolio/home" element={<PersonalInfo />} />
+          <Route path="Ryan_Portfolio/me" element={<AboutMe />} />
+          <Route path="/Ryan_Portfolio/skills" element={<Skills />} />
+          <Route path="/Ryan_Portfolio/projects" element={<Projects />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>
