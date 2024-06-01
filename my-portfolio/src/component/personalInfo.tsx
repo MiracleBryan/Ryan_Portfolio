@@ -14,7 +14,11 @@ const PersonalInfo = () => {
                     <p className='midFont defCursor'>Full-Stack Developer | Software Engineer</p>
                     <div className='subDis'>
                         <p className='smallFont defCursor'>As a full-stack developer | software engineer, I am dedicated to turning ideas into inovative web applications. Explore my latest project, showcasting my expertise in software development.</p>
-                        <a className='smallFont linkedin' href='https://www.linkedin.com/in/ryan-wang1120' onClick={() => { console.log("click linkedin") }}>Linkedin</a>
+                        <div>
+                            <a className='smallFont linkedin' href='https://www.linkedin.com/in/ryan-wang1120' onClick={() => { console.log("click linkedin") }}>Linkedin</a>
+                            <a className='smallFont linkedin' href='https://github.com/MiracleBryan' onClick={() => { console.log("click github") }}>Github</a>
+                        </div>
+                        
                     </div>
 
                 </div>
