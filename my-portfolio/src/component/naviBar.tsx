@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import './naviBar.scss';
-import { BlobItem, BlobServiceClient, StorageSharedKeyCredential} from '@azure/storage-blob';
+import { BlobItem, BlobServiceClient, StorageSharedKeyCredential } from '@azure/storage-blob';
+import axios from "axios";
 
 const NavigationBar = () => {
     const [scrolled, setScrolled] = useState<boolean>(false);
@@ -11,10 +12,11 @@ const NavigationBar = () => {
     //const connectionString = "https://ryanportfolio1.blob.core.windows.net/";
     //const containerName = 'portfolio';
     //const resumeName = "Ryan Wang Resume.pdf"
-    const sasUrl  = encodeURIComponent(process.env.SASURL!)
-
+    //const sasUrl = encodeURIComponent(process.env.SASURL!)
+    const sasUrl = "https://ryanportfolio1.blob.core.windows.net/portfolio/ryan_resume.pdf?sp=r&st=2024-06-06T11:07:24Z&se=2024-09-30T19:07:24Z&spr=https&sv=2022-11-02&sr=b&sig=30l1yTlrZuSRd%2BJ2Mv4efmRbCxe5GF8rMKnhNQ3tRmk%3D"
+    //const sasUrl = 'https://ryanportfolio1.blob.core.windows.net/portfolio/Ryan%20Wang%20Resume.pdf?sv=2022-11-02&ss=b&srt=o&sp=r&se=2024-06-07T00:00:00Z&st=2024-06-06T00:00:00Z&spr=https&sig=your_generated_sas_token';
     //process.env.SASURL
-    
+
 
     useEffect(() => {
         const onScroll = () => {
@@ -35,38 +37,55 @@ const NavigationBar = () => {
         setTimeout(() => { }, 500)
     }
 
-    const handleDownloadResume = async () => {
-        try {
-            var file = await fetch(sasUrl)
-            var blob = await file.blob()
-            console.log(file.blob);
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.style.display = 'none';
-            a.href = url;
-            a.download = 'Ryan_Wang_Resume.pdf';
-            document.body.appendChild(a);
-            a.click();
-            window.URL.revokeObjectURL(url);
-            document.body.removeChild(a);
-            //blobFile.push(await response.blobBody?.text());
-        } catch (e) {
-            console.log(e)
-            window.alert("\n                         Function temporarily unavailable-_-\n\n                    Please contact ryan.wang496@gmail.com")
-        }
+    // const handleDownloadResume = async () => {
+    //     try {
+    //         const response = await fetch(sasUrl, {
+    //             method: 'GET',
+    //             headers: {
+    //                 'Cache-Control': 'no-cache',
+    //                 'Pragma': 'no-cache'
+    //             }
+    //         });
+
+    //         console.log('Response:', response);
+    //         if (!response.ok) {
+    //             throw new Error(`Network response was not ok: ${response.statusText}`);
+    //         }
+
+    //         const blob = await response.blob();
+    //         console.log('Blob:', blob);
+
+    //         if (blob.size < 5000) { // Check if the response is too small, indicating a potential error message
+    //             const text = await blob.text();
+    //             console.log('Blob content (as text):', text);
+    //         } else {
+    //             const downloadUrl = window.URL.createObjectURL(blob);
+    //             const a = document.createElement('a');
+    //             a.style.display = 'none';
+    //             a.href = downloadUrl;
+    //             a.download = 'Ryan_Wang_Resume.pdf';
+    //             document.body.appendChild(a);
+    //             a.click();
+    //             window.URL.revokeObjectURL(downloadUrl);
+    //             document.body.removeChild(a);
+    //         }
+    //     } catch (e) {
+    //         console.log(e)
+    //         window.alert("\n                         Function temporarily unavailable-_-\n\n                    Please contact ryan.wang496@gmail.com")
+    //     }
 
 
 
 
-        // try {
-        //     const res = await fetch(url)
-        //     console.log("Success: " + res.body)
-        // } catch (e) {
-        //     console.log("Failed")
-        // }
+    //     // try {
+    //     //     const res = await fetch(url)
+    //     //     console.log("Success: " + res.body)
+    //     // } catch (e) {
+    //     //     console.log("Failed")
+    //     // }
 
 
-    }
+    // }
 
     return (
         <div className="navContainer">
@@ -81,7 +100,7 @@ const NavigationBar = () => {
                     <Link to="/Ryan_Portfolio/projects" className={`navTag ${activedBtn == 'Projects' ? 'actived' : ''}`} onClick={() => { handleNaviClick('Projects') }}>Projects</Link>
                 </div>
                 <div className="downloadFont">
-                    <div className="downloadFont" onClick={handleDownloadResume}>Download Resume</div>
+                    <a className='downloadFont' href={sasUrl} onClick={() => { console.log("click github") }}>Show Resume</a>
                 </div>
 
 

@@ -13,6 +13,7 @@
     "@types/node": "^16.18.86",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "axios": "^1.7.2",
     "env-cmd": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -43,11 +44,9 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 Edge version",
-      "last 1 Chrome version",
-      "last 1 Firefox version",
-      "last 1 safari version",
-      "last 1 webkit version"
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   },
   "devDependencies": {
